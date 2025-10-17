@@ -18,22 +18,22 @@ struct ContentView: View{
 //文本与图片视图
 struct TextImageExample: View{
     var body: some View{
-        VStack{
+        VStack(alignment: .leading , spacing: 20){
             Text("Hello,iOS club!")
                 .font(.system(size:40))
                 .fontWeight(.bold)
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [.red, .blue, .purple,.pink],
-                        startPoint: .leading,
-                        endPoint: .trailing
+                        colors: [.blue,.purple,.pink],
+                        startPoint: .bottomLeading,
+                        endPoint: .topTrailing
                     )
                 )
-            Image(systemName: "apple.intelligence")
-                .font(.system(size:40))
-                .symbolRenderingMode(.multicolor)
+                Image(systemName: "apple.intelligence")
+                    .font(.system(size:40))
+                    .symbolRenderingMode(.multicolor)
         }
-        .padding()
+                .padding()
     }
 }
 //控件示例视图
